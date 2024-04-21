@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
-  signInWithRedirect,
+  signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -22,6 +22,7 @@ const firebaseConfig = {
   appId: "1:1053071202115:web:5fbc8b86cd0f56196241f6",
 };
 
+// eslint-disable-next-line
 const firebaseApp = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 
@@ -32,7 +33,7 @@ provider.setCustomParameters({
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
-export const signInWithGoogleRedirect =  () => signInWithRedirect(auth, provider);
+
 
 export const db = getFirestore();
 
@@ -60,7 +61,6 @@ export const createUserDocumentFromAuth =  async (userAuth, newDisplayName) => {
         }
          
     }
-
     return userDocRef;
 };
 
@@ -69,3 +69,10 @@ export const createAuthUserWithEmailAndPassword = async (email,password) => {
   
   return await createUserWithEmailAndPassword(auth, email,password);
 }
+
+export const signInAuthUserWithEmailAndPassword = async (email,password) => {
+  if(!email || !password) return;
+  
+  return await signInWithEmailAndPassword(auth, email,password);
+}
+

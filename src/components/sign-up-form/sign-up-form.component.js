@@ -26,14 +26,23 @@ const SignUpForm = () => {
     }
 
     try{
-        const {user}= await createAuthUserWithEmailAndPassword(email,password);
+        const { user } = await createAuthUserWithEmailAndPassword(email,password);
         await createUserDocumentFromAuth(user, displayName);
         console.log('User Created', displayName);
         resetFormFields();
     }
 
     catch(error){
-        console.log("Somenthing is going wrong with authentification",error)
+      switch(error.code){
+
+        case "auth/email-already-in-use":
+        alert("email already in use");
+        break;
+
+        default:
+        console.log(error);
+      }
+        
     }
 
     
@@ -50,7 +59,7 @@ const SignUpForm = () => {
 
   return (
     <div>
-      <h1>Sign in with your password</h1>
+      <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="">Display name</label>
         <input
