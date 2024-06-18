@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-.button-container:hover{
+.button-container:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -28,10 +28,10 @@
     color: white;
 }
 
-.button-container.google-sign-in:hover{
+.button-container.google-sign-in:hover {
     background-color: #357ae8;
     border: none;
-} 
+}
 
 .button-container.inverted {
     background-color: white;
