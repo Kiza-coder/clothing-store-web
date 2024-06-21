@@ -1,39 +1,23 @@
-# Website Project Title
+# Website Clothing-we-store
 
-Brief description of your website project.
+Creating a web store with React.
+Improve my skills
 
-## About
-
-Overview of the project, including purpose, audience, and any relevant information.
 
 ## Demo
 
-Link to live demo (if available).
+[Link to live demo](https://jolly-taiyaki-f89780.netlify.app/)
 
 ## Technologies Used
 
-List of technologies and frameworks used.
+React
+Css
+Firestorm
+Netifly
 
 ## Features
 
-Key features of the website.
+- Create user
+- Payment online
 
-## Installation
 
-Step-by-step instructions for setting up the project locally.
-
-## Usage
-
-Instructions for interacting with the website.
-
-## Contributing
-
-Guidelines for contributing to the project.
-
-## License
-
-Specify project license.
-
-## Acknowledgements
-
-Credits or acknowledgements.
